@@ -1,6 +1,6 @@
 package main
 import ("fmt";"reflect";"strings")
-const testSuite = "shard-map-009e8e"
+const testSuite = "shard-map-a8ba4f"
 type TestCase struct{Name string;Input interface{};Expected interface{}}
 func assertEqual(name string, got, want interface{}) bool{ok:=reflect.DeepEqual(got,want);status:="PASS";if !ok{status="FAIL"};fmt.Printf("[%s] %s: %s (got=%v want=%v)\n",testSuite,status,name,got,want);return ok}
 func runSuite(cases []TestCase, fn func(interface{}) interface{}){pass,fail:=0,0;for _,tc:=range cases{if assertEqual(tc.Name,fn(tc.Input),tc.Expected){pass++}else{fail++}};fmt.Printf("[%s] Results: %d passed, %d failed\n",testSuite,pass,fail)}
